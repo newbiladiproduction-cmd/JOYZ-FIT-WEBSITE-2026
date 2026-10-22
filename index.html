@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JOYZ FIT — Site officiel</title>
+<meta name="description" content="Site officiel de JOYZ FIT : musique, clips, concerts, presse et booking. La musique au-delà des frontières.">
+<meta property="og:title" content="JOYZ FIT — Site officiel">
+<meta property="og:description" content="La musique au-delà des frontières.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="nav">
+  <a class="logo" href="#accueil" aria-label="JOYZ FIT, accueil">JOYZ FIT</a>
+  <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  <nav id="menu" aria-label="Navigation principale">
+    <a href="#biographie">Biographie</a><a href="#musique">Musique</a><a href="#videos">Vidéos</a>
+    <a href="#concerts">Concerts</a><a href="#presse">Presse</a><a href="#booking">Booking</a>
+  </nav>
+</header>
+<main id="contenu">
+<section id="accueil" class="hero">
+  <div class="hero-img" role="img" aria-label="Emplacement de la photo officielle de JOYZ FIT"></div>
+  <div class="hero-txt">
+    <h1>JOYZ FIT</h1>
+    <p class="slogan">La musique au-delà des frontières</p>
+    <p class="intro" data-conf="intro"></p>
+    <div class="btns"><a class="btn gold" href="#musique">Écouter la musique</a><a class="btn" href="#booking">Booking professionnel</a></div>
+  </div>
+</section>
+
+<section id="biographie" class="sec">
+  <h2>Biographie</h2>
+  <div class="bio">
+    <figure class="photo"><img id="bio-photo" src="images/joyz-fit-portrait.jpg" alt="Portrait officiel de JOYZ FIT" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',textContent:'Ajoutez images/joyz-fit-portrait.jpg'}))"></figure>
+    <div id="bio-texte"></div>
+  </div>
+</section>
+
+<section id="musique" class="sec alt">
+  <h2>Musique</h2>
+  <div id="liste-musique" class="grid"></div>
+  <div id="plateformes" class="btns"></div>
+</section>
+
+<section id="videos" class="sec">
+  <h2>Vidéos</h2>
+  <div id="liste-videos" class="grid"></div>
+</section>
+
+<section id="concerts" class="sec alt">
+  <h2>Concerts</h2>
+  <ul id="liste-concerts" class="concerts"></ul>
+</section>
+
+<section id="presse" class="sec">
+  <h2>Espace presse</h2>
+  <p class="lead">Ressources officielles pour les médias, festivals et organisateurs.</p>
+  <div id="liste-presse" class="grid"></div>
+</section>
+
+<section id="booking" class="sec alt">
+  <h2>Booking et contact</h2>
+  <div class="contact">
+    <div>
+      <p class="lead">Concerts, festivals, collaborations, partenariats : décrivez votre projet.</p>
+      <p><a id="mail" href="#"></a></p>
+      <p><a id="tel" href="#"></a></p>
+      <div id="reseaux" class="socials"></div>
+    </div>
+    <form id="form" novalidate>
+      <label>Nom<input name="nom" required autocomplete="name"></label>
+      <label>Adresse e-mail<input name="email" type="email" required autocomplete="email"></label>
+      <label>Organisation<input name="organisation" autocomplete="organization"></label>
+      <label>Type d'événement
+        <select name="type"><option>Concert</option><option>Festival</option><option>Événement privé</option><option>Collaboration</option><option>Partenariat</option><option>Presse</option><option>Autre</option></select>
+      </label>
+      <label>Date souhaitée<input name="date" type="date"></label>
+      <label>Message<textarea name="message" rows="5" required></textarea></label>
+      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn gold" type="submit">Envoyer la demande</button>
+      <p id="statut" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer><p>© <span id="an"></span> JOYZ FIT. Tous droits réservés.</p></footer>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
